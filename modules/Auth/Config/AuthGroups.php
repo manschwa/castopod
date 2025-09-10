@@ -130,7 +130,7 @@ class AuthGroups extends ShieldAuthGroups
             'pages.manage',
             'fediverse.manage-blocks',
         ],
-        'manager'   => ['podcasts.create', 'podcasts.import', 'persons.manage', 'pages.manage'],
+        'manager'   => ['podcasts.create', 'podcasts.import', 'persons.manage'],
         'podcaster' => ['admin.access'],
     ];
 

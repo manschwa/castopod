@@ -29,12 +29,6 @@ if (! function_exists('render_page_links')) {
             ]);
         }
 
-        $links .= anchor(route_to('credits'), lang('Person.credits'), [
-            'class' => 'px-2 py-1 underline hover:no-underline',
-        ]);
-        $links .= anchor(route_to('map'), lang('Page.map.title'), [
-            'class' => 'px-2 py-1 underline hover:no-underline',
-        ]);
         foreach ($pages as $page) {
             $links .= anchor($page->link, esc($page->title), [
                 'class' => 'px-2  py-1 underline hover:no-underline',

@@ -16,11 +16,21 @@
     <?php endif; ?>
 
     <header class="py-8 text-white border-b bg-header border-subtle">
-        <h1 class="container flex items-center justify-between px-2 py-4 mx-auto">
+        <h1 class="container flex items-center px-2 py-4 mx-auto">
+             <img src="/media/site/Podcast_Logo.png" class="h-24">
             <a href="<?= route_to(
                 'home',
-            ) ?>" class="inline-flex items-baseline text-3xl font-semibold font-display"><?= service('settings')->get('App.siteName') === 'Castopod' ? 'castopod' . svg('castopod-logo-base', 'h-6 ml-2') : esc(service('settings')->get('App.siteName')) ?></a>
+            ) ?>" class="px-2 inline-flex items-baseline text-6xl font-semibold font-display"><?= service('settings')
+            ->get('App.siteName') === 'Castopod' ? 'castopod' .
+    svg('castopod-logo-base', 'h-6 ml-2') : esc(service('settings')
+            ->get('App.siteName')) ?></a>
         </h1>
+        <h3 class="container flex items-center justify-between px-4 mx-auto">
+            <?= esc(service('settings')->get('App.siteDescription')) ?>
+        </h3>
+        <h3 class="container flex items-center justify-between px-2 mx-auto">
+                <a href="https://digitale-lehre.uni-osnabrueck.de/podcasting-mit-castopod/" class="px-2 flex font-bold" style="color: #FFC500;">Hier finden Sie weitere Infos.</a>
+        </h3>
     </header>
     <main class="container flex-1 px-4 py-10 mx-auto">
         <div class="flex flex-wrap items-center justify-between py-2 border-b border-subtle gap-x-4">
