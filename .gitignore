@@ -175,15 +175,6 @@ public/media/site/*
 # Generated files
 modules/Admin/Language/*/PersonsTaxonomy.php
 
-#-------------------------
-# Docker volumes
-#-------------------------
-
-mariadb
-phpmyadmin
-sessions
-data
-
 # Castopod bundle & packages
 castopod/
 castopod-*.zip
@@ -192,3 +183,5 @@ castopod-*.tar.gz
 # Plugins
 plugins/*
 !plugins/.gitkeep
+writable/plugins.json
+writable/plugins-lock.json

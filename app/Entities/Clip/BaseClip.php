@@ -31,7 +31,7 @@ use Modules\Media\Models\MediaModel;
  * @property Episode $episode
  * @property string $title
  * @property double $start_time
- * @property double $end_time
+ * @property ?double $end_time
  * @property double $duration
  * @property string $type
  * @property int|null $media_id
@@ -80,14 +80,6 @@ class BaseClip extends Entity
         'created_by' => 'integer',
         'updated_by' => 'integer',
     ];
-
-    /**
-     * @param array<string, mixed>|null $data
-     */
-    public function __construct(?array $data = null)
-    {
-        parent::__construct($data);
-    }
 
     public function getJobDuration(): ?int
     {

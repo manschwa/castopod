@@ -17,9 +17,9 @@ return [
     'no_episode' => 'No episode found!',
     'follow' => 'Follow',
     'followTitle' => 'Follow {actorDisplayName} on the fediverse!',
-    'followers' => '{numberOfFollowers, plural,
-        one {# follower}
-        other {# followers}
+    'fediverseFollowers' => '{numberOfFollowers, plural,
+        one {# Fediverse follower}
+        other {# Fediverse followers}
     }',
     'posts' => '{numberOfPosts, plural,
         one {# post}
@@ -42,7 +42,7 @@ return [
         }',
         'first_published_at' => 'First episode published on {0, date, medium}',
     ],
-    'sponsor' => 'Sponsor',
+    'funding' => 'Funding',
     'funding_links' => 'Funding links for {podcastTitle}',
     'find_on' => 'Find {podcastTitle} on',
     'listen_on' => 'Listen on',
@@ -51,5 +51,5 @@ return [
         other {# persons}
     }',
     'persons_list' => 'Persons',
-    'castopod_website' => 'Castopod (website)',
+    'links_mainpage' => 'Podcast (main page)',
 ];

@@ -8,6 +8,9 @@ const base = process.env.BASE ?? "/docs";
 
 // https://astro.build/config
 export default defineConfig({
+  server: {
+    host: true,
+  },
   site,
   base,
   integrations: [
@@ -225,28 +228,41 @@ export default defineConfig({
         },
         {
           label: "Plugins",
-          badge: {
-            text: "Experimental",
-          },
           items: [
             {
               label: "Introduction",
               link: "/plugins/",
             },
             {
-              label: "Creating a plugin",
+              label: "Install plugins",
+              link: "/plugins/install",
+            },
+            {
+              label: "Create a plugin",
               link: "/plugins/create",
+            },
+            {
+              label: "Share your plugin",
+              link: "/plugins/share",
             },
             {
               label: "Reference",
               items: [
                 {
+                  label: "plugins.json",
+                  link: "/plugins/reference/plugins-json",
+                },
+                {
+                  label: "plugins-lock.json",
+                  link: "/plugins/reference/plugins-lock-json",
+                },
+                {
                   label: "manifest.json",
-                  link: "/plugins/manifest",
+                  link: "/plugins/reference/manifest",
                 },
                 {
                   label: "hooks",
-                  link: "/plugins/hooks",
+                  link: "/plugins/reference/hooks",
                 },
               ],
             },

@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Rector\CodeQuality\Rector\ClassMethod\ExplicitReturnNullRector;
 use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
 use Rector\CodingStyle\Rector\Stmt\NewlineAfterStatementRector;
-use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
+use Rector\CodingStyle\Rector\String_\SimplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\If_\UnwrapFutureCompatibleIfPhpVersionRector;
 use Rector\DeadCode\Rector\Stmt\RemoveUnreachableStatementRector;
@@ -17,8 +17,8 @@ use Rector\ValueObject\PhpVersion;
 return RectorConfig::configure()
     ->withPaths([__DIR__ . '/app', __DIR__ . '/modules', __DIR__ . '/tests', __DIR__ . '/public'])
     ->withBootstrapFiles([__DIR__ . '/vendor/codeigniter4/framework/system/Test/bootstrap.php'])
-    ->withPhpVersion(PhpVersion::PHP_84)
-    ->withPhpSets(php84: true)
+    ->withPhpVersion(PhpVersion::PHP_85)
+    ->withPhpSets(php85: true)
     ->withPreparedSets(
         typeDeclarations: true,
         codeQuality: true,
@@ -48,7 +48,7 @@ return RectorConfig::configure()
             __DIR__ . '/app/Language/*',
             __DIR__ . '/modules/*/Language/*',
         ],
-        SymplifyQuoteEscapeRector::class => [__DIR__ . '/app/Language/*', __DIR__ . '/modules/*/Language/*'],
+        SimplifyQuoteEscapeRector::class => [__DIR__ . '/app/Language/*', __DIR__ . '/modules/*/Language/*'],
 
         NewlineAfterStatementRector::class => [__DIR__ . '/app/Views'],
 
